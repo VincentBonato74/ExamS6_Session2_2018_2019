@@ -1,7 +1,10 @@
-import Patterns.Observable;
+package Modele;
+
+import Modele.Caisse;
 import Patterns.Observateur;
 import Structures.Sequence;
 import Structures.SequenceListe;
+import Vue.NiveauGraphique;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -9,8 +12,8 @@ import java.awt.event.ActionListener;
 
 public class Jeu implements ActionListener, Observateur {
     public int largeur;
-    NiveauGraphique ng;
-    Sequence<Caisse> caisses;
+    public NiveauGraphique ng;
+    public Sequence<Caisse> caisses;
     Timer ajout;
 
     public Jeu(){

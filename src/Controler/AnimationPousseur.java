@@ -1,3 +1,7 @@
+package Controler;
+
+import Vue.NiveauGraphique;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -12,7 +16,7 @@ public class AnimationPousseur implements ActionListener {
     boolean retombe, EnAir, EnTrainDeTomber;
     int posY;
 
-    AnimationPousseur(NiveauGraphique n){
+    public AnimationPousseur(NiveauGraphique n){
         ng = n;
         temps = new Timer(16, this);
         vitesseAnim = 0.2;
@@ -45,14 +49,14 @@ public class AnimationPousseur implements ActionListener {
         EnAir = true;
     }
 
-    void monte(){
+    public void monte(){
         temps.start();
         retombe = false;
         EnTrainDeTomber = false;
         EnAir = true;
     }
 
-    void descend(){
+    public void descend(){
         temps.start();
         vitesseChute = 1              ;
         retombe = false;
@@ -62,7 +66,6 @@ public class AnimationPousseur implements ActionListener {
 
     @Override
     public void actionPerformed(ActionEvent e) {
-        System.out.println("Salut");
         if(EnTrainDeTomber){
             posY = (int) Math.round(posY - vitesseChute);
             vitesseChute = vitesseChute*1.5;
@@ -71,7 +74,6 @@ public class AnimationPousseur implements ActionListener {
                 temps.stop();
             }
         }else{
-            System.out.println("Salut2");
             posY = (int) Math.round(posY + vitesseMonte);
         }
 
@@ -88,7 +90,6 @@ public class AnimationPousseur implements ActionListener {
             progres = 1;
         }*/
         //int y = (int) Math.round((1-progres)*depart.y + progres*arrivee.y);
-        System.out.println(posY);
         ng.fixePosition(0, posY);
         /*if(retombe){
             retombe(0, arrivee.y);

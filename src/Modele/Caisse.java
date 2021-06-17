@@ -1,3 +1,5 @@
+package Modele;
+
 import Patterns.Observable;
 import Patterns.Observateur;
 
@@ -7,7 +9,7 @@ import java.awt.event.ActionListener;
 
 public class Caisse extends Observable implements ActionListener {
     int PositionDep;
-    int posX;
+    public int posX;
     int destinationX;
     double progres, vitesseAnim;
     Timer caisse;

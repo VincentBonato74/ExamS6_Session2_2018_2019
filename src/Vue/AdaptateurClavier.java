@@ -1,3 +1,7 @@
+package Vue;
+
+import Controler.AnimationPousseur;
+
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 

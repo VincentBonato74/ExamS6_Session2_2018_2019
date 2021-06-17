@@ -1,3 +1,7 @@
+package Vue;
+
+import Modele.Caisse;
+import Modele.Jeu;
 import Structures.Iterateur;
 
 import javax.imageio.ImageIO;

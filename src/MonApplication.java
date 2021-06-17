@@ -1,4 +1,7 @@
-import Patterns.Observateur;
+import Controler.AnimationPousseur;
+import Modele.Jeu;
+import Vue.AdaptateurClavier;
+import Vue.NiveauGraphique;
 
 import javax.swing.*;
 
